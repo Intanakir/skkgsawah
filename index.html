@@ -1,0 +1,353 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SK Kg Sawah Library</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5fdf6;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .header {
+      background: url('banner.jpg') no-repeat center center;
+      background-size: cover;
+      text-align: center;
+      padding: 80px 20px;
+      border-bottom: 4px solid #66bb6a;
+    }
+
+    .header img.logo {
+      width: 150px;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      color: white;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .header p {
+      font-size: 18px;
+      color: #f0f0f0;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    }
+
+    .topnav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #388e3c;
+      align-items: center;
+      position: relative;
+    }
+
+    .topnav a {
+      padding: 14px 20px;
+      color: white;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .topnav a:hover {
+      background-color: #c8e6c9;
+      color: #2e7d32;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f8e9;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #2e7d32;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #c8e6c9;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .search-icon {
+      font-size: 20px;
+      padding: 10px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .search-container {
+      display: none;
+      justify-content: center;
+      margin: 10px 0;
+    }
+
+    .search-container input {
+      padding: 8px;
+      width: 250px;
+      border: 2px solid #388e3c;
+      border-radius: 5px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .leftcolumn {
+      flex: 3;
+    }
+
+    .rightcolumn {
+      flex: 1;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .card h2.marquee {
+      white-space: nowrap;
+      display: inline-block;
+      animation: scroll-left 12s linear infinite;
+      color: #2e7d32;
+    }
+
+    @keyframes scroll-left {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .card h3 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    .fakeimg {
+      background-color: #dcedc8;
+      text-align: center;
+      padding: 40px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      color: #666;
+    }
+
+    .footer {
+      background: #eee;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 30px;
+    }
+
+    .card a {
+      color: #2e7d32;
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+
+      .topnav {
+        flex-direction: column;
+      }
+
+      .topnav a,
+      .dropdown {
+        width: 100%;
+        text-align: center;
+      }
+
+      .dropdown-content {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <img src="images.png" alt="SK Kg Sawah Logo" class="logo" />
+  <h1>SK Kg Sawah Library</h1>
+  <p>Your Gateway to Knowledge & Imagination</p>
+</div>
+
+<div class="topnav">
+  <a href="index.html">Home</a>
+  <a href="aboutme.html">About Me</a>
+  <a href="libraryinfo.html">Library Info</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="activities.html">Activities</a>
+
+  <div class="dropdown">
+    <a href="e-books.html">E-Books ▼</a>
+    <div class="dropdown-content">
+      <a href="malaybooks.html">Malay Books</a>
+      <a href="englishbooks.html">English Books</a>
+      <a href="comics.html">Comics</a>
+    </div>
+  </div>
+
+  <a href="smartlinks.html">Smart Links</a>
+  <a href="contact.html">Contact</a>
+
+  <span class="search-icon" onclick="toggleSearch()">🔍</span>
+</div>
+
+<div class="search-container" id="searchContainer">
+  <input type="text" placeholder="Search this page..." onkeyup="searchText(this.value)">
+</div>
+
+<div class="container">
+  <div class="leftcolumn">
+    <div class="card" id="home">
+      <h2 class="marquee">Welcome to Our Library</h2>
+      <div class="fakeimg">📚 Library Photo Placeholder</div>
+      <img src="placeholder.jpg" alt="Library Photo" style="width:100%; margin-top:15px; border-radius:8px;" />
+      <p>Explore a world of books, learning resources, and fun activities that encourage a love for reading among students of Sekolah Kebangsaan Kg Sawah.</p>
+    </div>
+
+    <!-- IMAGE SLIDER START -->
+    <div class="card">
+      <h3>🖼️ Photo Slider</h3>
+      <div class="slider" style="position: relative; overflow: hidden; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); margin-top: 10px;">
+        <div class="slides" id="slides" style="display: flex; width: 300%; transition: transform 10.0s ease-in-out;">
+          <img src="slider1.jpg" alt="Slide 1" style="width: 100%;">
+          <img src="slider2.jpg" alt="Slide 2" style="width: 100%;">
+          <img src="slider3.jpg" alt="Slide 3" style="width: 100%;">
+        </div>
+        <div class="navigation" style="position: absolute; top: 50%; width: 100%; display: flex; justify-content: space-between; transform: translateY(-50%);">
+          <button onclick="prevSlide()" style="background: rgba(0,0,0,0.5); color: white; border: none; font-size: 20px; padding: 10px; cursor: pointer;">❮</button>
+          <button onclick="nextSlide()" style="background: rgba(0,0,0,0.5); color: white; border: none; font-size: 20px; padding: 10px; cursor: pointer;">❯</button>
+        </div>
+      </div>
+    </div>
+    <!-- IMAGE SLIDER END -->
+
+    <div class="card" id="collection">
+      <h3>📖 Latest Books</h3>
+      <div class="fakeimg">New Book Covers Here</div>
+      <img src="newbooks.jpeg" alt="New Book Covers" style="width:100%; margin-top:15px; border-radius:8px;" />
+      <p>Check out our newest arrivals, including storybooks, encyclopedias, and Malay novels specially selected for curious young minds.</p>
+    </div>
+
+    <div class="card" id="activities">
+      <h3>🎉 Reading Programs</h3>
+      <p>Join our weekly activities such as NILAM reading logs, storytelling sessions, and reading challenges to inspire lifelong readers!</p>
+    </div>
+  </div>
+
+  <div class="rightcolumn">
+    <div class="card">
+      <h3>⏰ Opening Hours</h3>
+      <p>Monday – Friday<br>8:00 AM – 1:00 PM</p>
+    </div>
+
+    <div class="card">
+      <h3>👩‍🏫 Librarian</h3>
+      <p>Mrs. Aisyah Binti Ahmad</p>
+    </div>
+
+    <div class="card">
+      <h3>🔗 Useful Links</h3>
+      <p>
+        <a href="https://www.moe.gov.my" target="_blank">Ministry of Education</a><br>
+        <a href="https://www.pnm.gov.my" target="_blank">National Library</a><br>
+        <a href="https://ains.moe.gov.my/login?returnUrl=/" target="_blank">eNILAM Portal</a>
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>🎵 Library Music</h3>
+      <audio controls autoplay loop>
+        <source src="sound.mp3" type="audio/mpeg">
+      </audio>
+      <p style="font-size: 14px; color: #777;">Now Playing: "Carefree" by Kevin MacLeod</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <p>© 2025 Sekolah Kebangsaan Kg Sawah. All Rights Reserved.</p>
+</div>
+
+<script>
+  function toggleSearch() {
+    const container = document.getElementById('searchContainer');
+    container.style.display = container.style.display === 'flex' ? 'none' : 'flex';
+  }
+
+  function searchText(keyword) {
+    keyword = keyword.toLowerCase();
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(keyword) ? 'block' : 'none';
+    });
+  }
+
+  let currentIndex = 0;
+
+  function showSlide(index) {
+    const slides = document.getElementById("slides");
+    const totalSlides = slides.children.length;
+    if (index >= totalSlides) currentIndex = 0;
+    else if (index < 0) currentIndex = totalSlides - 1;
+    else currentIndex = index;
+    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentIndex - 1);
+  }
+
+  setInterval(nextSlide, 5000);
+</script>
+
+</body>
+</html>

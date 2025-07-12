@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome - SK Kg Sawah Library</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Fredoka', sans-serif;
+      background: linear-gradient(180deg, #e8f5e9, #a5d6a7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .welcome-box {
+      background-color: #ffffffcc;
+      padding: 50px 30px;
+      border-radius: 25px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+    }
+
+    .welcome-box img.logo {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
+    .welcome-box h1 {
+      font-size: 32px;
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    .welcome-box p {
+      font-size: 18px;
+      color: #4e4e4e;
+      margin-bottom: 25px;
+    }
+
+    .enter-btn {
+      display: inline-block;
+      background-color: #66bb6a;
+      color: white;
+      padding: 12px 25px;
+      font-size: 16px;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .enter-btn:hover {
+      background-color: #388e3c;
+      transform: scale(1.05);
+    }
+
+    .floating-books {
+      position: absolute;
+      width: 100px;
+      animation: float 6s ease-in-out infinite;
+      opacity: 0.1;
+    }
+
+    .book1 { top: 10%; left: 5%; animation-delay: 0s; }
+    .book2 { bottom: 15%; right: 10%; animation-delay: 2s; }
+    .book3 { top: 25%; right: 15%; animation-delay: 4s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating book decorations -->
+  <img src="book1.jpg" class="floating-books book1" alt="book decoration" />
+  <img src="book2.jpeg" class="floating-books book2" alt="book decoration" />
+  <img src="book1.jpg" class="floating-books book3" alt="book decoration" />
+
+  <div class="welcome-box">
+    <img src="images.png" alt="SK Kg Sawah Logo" class="logo" />
+    <h1>Welcome to Our Library</h1>
+    <p>Let’s explore, read and grow together at SK Kg Sawah’s digital library!</p>
+    <a href="index.html" class="enter-btn">Enter Website</a>
+  </div>
+
+</body>
+</html>

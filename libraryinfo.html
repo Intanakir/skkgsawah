@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Library Info | SK Kg Sawah Library</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5fdf6;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .header {
+      background: url('banner.jpg') no-repeat center center;
+      background-size: cover;
+      text-align: center;
+      padding: 80px 20px;
+      border-bottom: 4px solid #66bb6a;
+    }
+
+    .header img.logo {
+      width: 150px;
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      color: white;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .header p {
+      font-size: 18px;
+      color: #f0f0f0;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    }
+
+    .topnav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #388e3c;
+      align-items: center;
+      position: relative;
+    }
+
+    .topnav a {
+      padding: 14px 20px;
+      color: white;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .topnav a:hover {
+      background-color: #c8e6c9;
+      color: #2e7d32;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f8e9;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #2e7d32;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #c8e6c9;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .search-icon {
+      font-size: 20px;
+      padding: 10px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .search-container {
+      display: none;
+      justify-content: center;
+      margin: 10px 0;
+    }
+
+    .search-container input {
+      padding: 8px;
+      width: 250px;
+      border: 2px solid #388e3c;
+      border-radius: 5px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    h2, h3 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+
+    table th, table td {
+      border: 1px solid #a5d6a7;
+      padding: 10px;
+      text-align: left;
+    }
+
+    table th {
+      background-color: #c8e6c9;
+      color: #2e7d32;
+    }
+
+    .footer {
+      background: #eee;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 30px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .topnav {
+        flex-direction: column;
+      }
+
+      .topnav a,
+      .dropdown {
+        width: 100%;
+        text-align: center;
+      }
+
+      .dropdown-content {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <img src="images.png" alt="SK Kg Sawah Logo" class="logo" />
+  <h1>SK Kg Sawah Library</h1>
+  <p>Your Gateway to Knowledge & Imagination</p>
+</div>
+
+<div class="topnav">
+  <a href="index.html">Home</a>
+<a href="aboutme.html">About Me</a>
+  <a href="libraryinfo.html">Library Info</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="activities.html">Activities</a> <!-- Changed from dropdown to single link -->
+
+  <div class="dropdown">
+      <a href="e-books.html">E-Books ▼</a>
+      <div class="dropdown-content">
+        <a href="https://anyflip.com/bookcase/mxhvd/">Malay Books</a>
+        <a href="https://anyflip.com/bookcase/oypmk/">English Books</a>
+        <a href="https://online.anyflip.com/ujmgc/tfmd/mobile/index.html">Text Books</a>
+      </div>
+  </div>
+
+  <a href="smartlinks.html">Smart Links</a>
+  <a href="contact.html">Contact</a>
+
+  <span class="search-icon" onclick="toggleSearch()">🔍</span>
+</div>
+
+<div class="search-container" id="searchContainer">
+  <input type="text" placeholder="Search this page..." onkeyup="searchText(this.value)">
+</div>
+
+<div class="container">
+  <div class="card">
+    <h2>About Our Library</h2>
+    <p>The SK Kampung Sawah Library is a cheerful and student-friendly environment dedicated to promoting reading habits and providing access to valuable learning resources. The library supports academic learning and nurtures curiosity among students through various reading programs and engaging activities.</p>
+  </div>
+
+  <div class="card">
+    <h2>Vision</h2>
+    <p>To foster a lifelong love for reading and learning in every student.</p>
+  </div>
+
+  <div class="card">
+    <h2>Mission & Objectives</h2>
+    <table>
+      <tr>
+        <th>Objective</th>
+        <th>Description</th>
+      </tr>
+      <tr>
+        <td>Diverse Reading Materials</td>
+        <td>Provide materials suited for all reading levels and interests.</td>
+      </tr>
+      <tr>
+        <td>Interactive Environment</td>
+        <td>Offer fun and engaging setups that promote learning through play and participation.</td>
+      </tr>
+      <tr>
+        <td>Support Learning</td>
+        <td>Equip students with knowledge and skills for academic success through curated content.</td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>Facilities</h2>
+    <table>
+      <tr>
+        <th>Facility</th>
+        <th>Purpose</th>
+      </tr>
+      <tr>
+        <td>Reading Corner</td>
+        <td>Quiet and comfortable space for personal reading time.</td>
+      </tr>
+      <tr>
+        <td>Storytelling Area</td>
+        <td>Interactive space for storytelling sessions and book readings.</td>
+      </tr>
+      <tr>
+        <td>Multimedia Resources</td>
+        <td>Access to digital learning tools and materials.</td>
+      </tr>
+      <tr>
+        <td>Comfortable Seating</td>
+        <td>Student-friendly furniture to enhance learning comfort.</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class="footer">
+  <p>© 2025 Sekolah Kebangsaan Kg Sawah. All Rights Reserved.</p>
+</div>
+
+<script>
+  function toggleSearch() {
+    const container = document.getElementById('searchContainer');
+    container.style.display = container.style.display === 'flex' ? 'none' : 'flex';
+  }
+
+  function searchText(keyword) {
+    keyword = keyword.toLowerCase();
+    const cards = document.querySelectorAll('.card');
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(keyword) ? 'block' : 'none';
+    });
+  }
+</script>
+
+</body>
+</html>

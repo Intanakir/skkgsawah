@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Activities - SK Kg Sawah Library</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5fdf6;
+      color: #333;
+    }
+
+    .header {
+      background: url('banner.jpg') no-repeat center center;
+      background-size: cover;
+      text-align: center;
+      padding: 70px 20px;
+      border-bottom: 4px solid #66bb6a;
+    }
+
+    .header img.logo {
+      width: 150px;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    .topnav {
+      display: flex;
+      justify-content: center;
+      background-color: #388e3c;
+      flex-wrap: wrap;
+      align-items: center;
+      position: relative;
+    }
+
+    .topnav a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .topnav a:hover {
+      background-color: #c8e6c9;
+      color: #2e7d32;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f8e9;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #2e7d32;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #c8e6c9;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .search-icon {
+      font-size: 20px;
+      padding: 10px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .search-container {
+      display: none;
+      justify-content: center;
+      margin: 10px 0;
+    }
+
+    .search-container input {
+      padding: 8px;
+      width: 250px;
+      border: 2px solid #388e3c;
+      border-radius: 5px;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      color: #2e7d32;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .activity {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .activity h3 {
+      color: #2e7d32;
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      background: #eee;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .topnav {
+        flex-direction: column;
+      }
+
+      .topnav a,
+      .dropdown {
+        width: 100%;
+        text-align: center;
+      }
+
+      .dropdown-content {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="header">
+  <img src="images.png" alt="SK Kg Sawah Logo" class="logo" />
+  <h1>SK Kg Sawah Library</h1>
+</div>
+
+<div class="topnav">
+  <a href="index.html">Home</a>
+<a href="aboutme.html">About Me</a>
+  <a href="libraryinfo.html">Library Info</a>
+  <a href="gallery.html">Gallery</a>
+  <a href="activities.html">Activities</a>
+
+<div class="dropdown">
+      <a href="e-books.html">E-Books ▼</a>
+      <div class="dropdown-content">
+        <a href="https://anyflip.com/bookcase/mxhvd/">Malay Books</a>
+        <a href="https://anyflip.com/bookcase/oypmk/">English Books</a>
+        <a href="https://online.anyflip.com/ujmgc/tfmd/mobile/index.html">Text Books</a>
+      </div>
+  </div>
+
+  <a href="smartlinks.html">Smart Links</a>
+  <a href="contact.html">Contact</a>
+  <span class="search-icon" onclick="toggleSearch()">🔍</span>
+</div>
+
+<div class="search-container" id="searchContainer">
+  <input type="text" placeholder="Search activities..." onkeyup="searchActivities(this.value)">
+</div>
+
+<div class="container">
+  <h2>🎉 Library Activities</h2>
+
+  <div class="activity">
+    <h3>📖 NILAM Reading Program</h3>
+    <p>A school-wide initiative to encourage students to read and log their reading activities using the NILAM portal. Awards are given to enthusiastic readers!</p>
+  </div>
+
+  <div class="activity">
+    <h3>🎙️ Storytelling Competition</h3>
+    <p>Students participate in storytelling contests that enhance their creativity, confidence, and speaking skills.</p>
+  </div>
+
+  <div class="activity">
+    <h3>📚 Book Review Challenge</h3>
+    <p>A fun competition where students write short reviews of their favorite books and get featured on the school bulletin.</p>
+  </div>
+
+  <div class="activity">
+    <h3>📸 Library Day Celebration</h3>
+    <p>An annual celebration with quizzes, exhibitions, and interactive games to promote library usage and reading habits.</p>
+  </div>
+</div>
+
+<div class="footer">
+  <p>© 2025 Sekolah Kebangsaan Kg Sawah. All Rights Reserved.</p>
+</div>
+
+<script>
+  function toggleSearch() {
+    const container = document.getElementById('searchContainer');
+    container.style.display = container.style.display === 'flex' ? 'none' : 'flex';
+  }
+
+  function searchActivities(keyword) {
+    keyword = keyword.toLowerCase();
+    const activities = document.querySelectorAll('.activity');
+    activities.forEach(activity => {
+      const text = activity.innerText.toLowerCase();
+      activity.style.display = text.includes(keyword) ? 'block' : 'none';
+    });
+  }
+</script>
+
+</body>
+</html>

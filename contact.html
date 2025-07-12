@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - SK Kg Sawah Library</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f5fdf6;
+      color: #333;
+      margin: 0;
+    }
+
+    .header {
+      position: relative;
+      background: url('cont1.png') no-repeat center center;
+      background-size: cover;
+      text-align: center;
+      height: 300px;
+      border-bottom: 4px solid #66bb6a;
+    }
+
+    .topnav {
+      display: flex;
+      justify-content: center;
+      background-color: #388e3c;
+      flex-wrap: wrap;
+      align-items: center;
+      position: relative;
+    }
+
+    .topnav a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+
+    .topnav a:hover {
+      background-color: #c8e6c9;
+      color: #2e7d32;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f8e9;
+      min-width: 180px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    .dropdown-content a {
+      color: #2e7d32;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #c8e6c9;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .contact-icons {
+      text-align: center;
+      background: #e8f5e9;
+      padding: 20px 0;
+    }
+
+    .contact-icons a {
+      margin: 10px;
+      display: inline-block;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #2e7d32;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #66bb6a;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #388e3c;
+    }
+
+    .rating {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .stars {
+      display: flex;
+      justify-content: center;
+      flex-direction: row-reverse;
+      gap: 5px;
+    }
+
+    .stars input[type="radio"] {
+      display: none;
+    }
+
+    .stars label {
+      font-size: 30px;
+      color: lightgray;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+
+    .stars input:checked ~ label,
+    .stars label:hover,
+    .stars label:hover ~ label {
+      color: gold;
+    }
+
+    .footer {
+      background: #f1f1f1;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .topnav {
+        flex-direction: column;
+      }
+
+      .topnav a,
+      .dropdown {
+        width: 100%;
+        text-align: center;
+      }
+
+      .dropdown-content {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header"></div>
+
+  <div class="topnav">
+    <a href="index.html">Home</a>
+<a href="aboutme.html">About Me</a>
+    <a href="libraryinfo.html">Library Info</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="activities.html">Activities</a>
+    <div class="dropdown">
+      <a href="e-books.html">E-Books ▼</a>
+      <div class="dropdown-content">
+        <a href="https://anyflip.com/bookcase/mxhvd/">Malay Books</a>
+        <a href="https://anyflip.com/bookcase/oypmk/">English Books</a>
+        <a href="https://online.anyflip.com/ujmgc/tfmd/mobile/index.html">Text Books</a>
+      </div>
+    </div>
+    <a href="smartlinks.html">Smart Links</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <!-- Contact Icons Section -->
+  <div class="contact-icons">
+    <h3>📱 Connect With Us</h3>
+    <a href="https://wa.me/601121007638" target="_blank">
+      <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" width="48" height="48">
+    </a>
+    <a href="https://www.facebook.com/p/SK-Kampung-Sawah-Rasmi-100076173918879/" target="_blank">
+      <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook" width="48" height="48">
+    </a>
+  </div>
+
+  <div class="container">
+    <h2>📬 Contact Us</h2>
+    <form>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <div class="rating">
+        <p>🌟 Rate This Website</p>
+        <div class="stars">
+          <input type="radio" id="star5" name="rating" value="5"><label for="star5">★</label>
+          <input type="radio" id="star4" name="rating" value="4"><label for="star4">★</label>
+          <input type="radio" id="star3" name="rating" value="3"><label for="star3">★</label>
+          <input type="radio" id="star2" name="rating" value="2"><label for="star2">★</label>
+          <input type="radio" id="star1" name="rating" value="1"><label for="star1">★</label>
+        </div>
+      </div>
+
+      <button type="submit">Send</button>
+      <button type="reset">Reset</button>
+    </form>
+  </div>
+
+  <div class="footer">
+    <p>© 2025 Sekolah Kebangsaan Kg Sawah. All Rights Reserved.</p>
+  </div>
+
+</body>
+</html>
